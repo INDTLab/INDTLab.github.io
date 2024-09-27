@@ -40,8 +40,9 @@
                     </h3>
                 </div>
                 <ul class="list-unstyled name-list">
-                    <li><a href="" target="_blank">Hao Qi</a></li>
-                    <li><a href="" target="_blank">Shixuan Xu</a></li>
+                    <li><a href="" target="_blank">Jinming Zhao</a></li>
+                    <li><a href="" target="_blank">Huiyu Zhou</a></li>
+                    <li><a href="" target="_blank">Junyu Dong</a></li>
                     <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao" target="_blank">Xinghui Dong</a></li>
     
                 </ul>
@@ -62,15 +63,14 @@
               <table>
                 <tr>
                   <td style="padding:5px 5px 5px 5px;">
-                      <img src='.\Packages\PATS-UIENet\Data\network\img_arch.png' height="803" width="1096" />
+                      <img src='.\Packages\PATS-UIENet\Data\network\BASR-GCN.png' height="803" width="1096" />
                   </td>
 
                 </tr>
               </table>
             </div>
           </div>
-            <p> The architecture of the proposed PA-UIENet, which comprises three individual streams: D-Stream, B-Stream and A-Stream, 
-                to estimate the degradation parameters of the revised IFM.</p>            
+            <p> The architecture of the proposed Boundary-Aware Shape Recognition Graph Convolutional Network (BASR-GCN).</p>            
             
         </div>
     </section>
@@ -80,18 +80,11 @@
                 Abstract
             </div>
             <div class="details" style="text-align: justify" ;>
-                Underwater images normally suffer from degradation due to the transmission medium of water bodies. 
-                Both traditional prior-based approaches and deep learning-based methods have been used to address this problem. 
-                However, the inflexible assumption of the former often impairs their effectiveness in handling diverse underwater scenes, 
-                while the generalization of the latter to unseen images is usually weakened by insufficient data. 
-                In this study, we leverage both the physics-based underwater Image Formation Model (IFM) and deep learning techniques for Underwater Image Enhancement (UIE). 
-                To this end, we propose a novel Physics-Aware Triple-Stream Underwater Image Enhancement Network, 
-                i.e., PATS-UIENet, which comprises a Direct Signal Transmission Estimation Steam (D-Stream), 
-                a Backscatter Signal Transmission Estimation Steam (B-Stream) and an Ambient Light Estimation Stream (A-Stream). 
-                This network fulfills the UIE task by explicitly estimating the degradation parameters of a revised IFM. 
-                We also adopt an IFM-inspired semi-supervised learning framework, which exploits both the labeled and unlabeled images, to address the issue of insufficient data. 
-                Our method performs better than, or at least comparably to, sixteen baselines across five testing sets in the degradation estimation and UIE tasks. 
-                This should be due to the fact that it not only can model the degradation but also can learn the characteristics of diverse underwater scenes.
+                Shape recognition, which often involves topology in mathematics, is a fundamental subfield of image recognition. 
+Although deep learning techniques have been widely applied to image recognition and have achieved great success, this is not the case for 2D shape recognition. 
+Inspired by the powerful spatial representation ability of Graph Convolutional Networks (GCNs), we leverage this technique to address the shape recognition problem. To this end, we propose a Boundary-Aware Shape Recognition Graph Convolutional Network (BASR-GCN). To be specific, we first extract the maximum boundary of the objects depicted in an image and sample this boundary into a set of key points. 
+Given a key point, a set of features are then extracted as its representation. Furthermore, we construct a series of graphs from the key points and use the BASR-GCN to learn the spatial layout of these points. In addition, we introduce a multi-scale BASR-GCN (BASR-GCN-MS) in order to exploit the shape features extracted at different scales. To our knowledge, GCNs have not been applied to 2D shape recognition before. The proposed method is tested using four publicly available shape data sets. Experimental results show that our method outperforms, or at least performs comparably to, baselines. We believe that these promising results should be due to the modeling of the semantic information fulfilled by the proposed method via encoding the spatial layout of the key points.
+
             </div>
         </section>
         
