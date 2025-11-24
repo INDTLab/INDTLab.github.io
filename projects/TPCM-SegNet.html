@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ICCTUNet">
+
+    <title>TPCM-SegNet</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/TPCM-SegNet/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/TPCM-SegNet/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/TPCM-SegNet/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/TPCM-SegNet/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/TPCM-SegNet/js/bulma-slider.min.js"></script>
+    <script src="./Packages/TPCM-SegNet/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <div class="wrapper">
+
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">Small Sample Image Segmentation By Coupling Convolutions and Transformers
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Borong Xu</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=iPYdUpAAAAAJ&hl=en" target="_blank">Junyu Dong</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao" target="_blank">Xinghui Dong</a></li>
+    
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a></li>
+                </ul>
+
+            </div>
+            </br>
+       
+
+        <div align="center">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+              <table>
+                <tr>
+                  <td style="padding:5px 5px 5px 5px;">
+                      <img src='./Packages/TPCM-SegNet/Data/network/TPCM-SegNet.png' height="644" width="1178" />
+                  </td>
+
+                </tr>
+
+                  
+              </table>
+            </div>
+          </div>
+            <p> The architecture of the Text-Prompted Dual-Path Convolution-Mamba Network (TPCM-SegNet) for anomaly segmentation. Here, (a) presents the overall structure of TPCM-SegNet, while (b), (c) and (d) illustrate the detailed structures of TPB, CFB and FFB, respectively. In addition, (e) and (f) show the structures of the initialization block and the classification block, respectively.</p>            
+            
+        </div>
+    </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Anomaly segmentation has been widely applied to diagnosis of medical organs and lesions and detection of industrial defects. However, existing methods still face challenges in extracting discriminant image features and utilizing semantic information. To address these issues, we propose a Text-Prompted Dual-Path Convolution-Mamba Network (TPCM-SegNet)\footnote{The code and models will be available at https://indtlab.github.io/projects/TPCM-SegNet upon the acceptance of the paper.}, which integrates Residual Double-Convolution Blocks (RDCBs) and Mamba-Transformer Blocks (MTBs) in two parallel paths for the purpose of extracting local and global features, respectively. Given a pair of RDCB and MTB at the same stage, a Feature Fusion Block (FFB) is introduced in order to facilitate the interaction and fusion of the features extracted using these blocks. Furthermore, we fuse the text tokens extracted from a textual description with the image features extracted using each of those blocks through a Text Prompt Block (TPB), to enhance the semantics understanding ability of the network. A Cascade Feature Block (CFB) is also designed for each stage of the encoder, to combine the feature maps, the logit maps decoded from them and the input image. This block incorporates the prior and original characteristics into the image representation. Experimental results demonstrate that our TPCM-SegNet achieves the superior, or at least comparable, performance to baselines, across eight publicly available datasets. These promising results should benefit from the powerful ability of image representation and semantic understanding of the proposed network.
+                
+            </div>
+        </section>
+        
+        
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/TPCM-SegNet/blob/main/TPCM_SegNet__A_Text_Prompted_Dual_Path_Convolution_Mamba_Network_for_Anomaly_Segmentation%20(1).pdf' target="_blank"><img class='links-cover'src='./Packages/TPCM-SegNet/Data/Cover.png' alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/TPCM-SegNet' target="_blank"><img class='links-cover'
+                                        src='./Packages/TPCM-SegNet/Data/github.png' alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href='https://github.com/INDTLab/TPCM-SegNet/blob/main/TPCM_SegNet__A_Text_Prompted_Dual_Path_Convolution_Mamba_Network_for_Anomaly_Segmentation%20(1).pdf' target="_blank">Paper</a>
+                    
+                        </td>
+                        <td><a href='https://github.com/INDTLab/TPCM-SegNet' target="_blank">Code</a></td>
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        
+
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                      <table>
+                        
+                        <tr>
+                            <td style="padding:5px 5px 5px 5px;">
+                                <img src='./Packages/TPCM-SegNet/Data/results/TableI.png' height="80%" width="100%" />
+                            </td>
+                            <td style="padding:5px 5px 5px 5px;">
+                                <img src='./Packages/TPCM-SegNet/Data/results/TableII.png' height="80%" width="100%" />
+                            </td>
+                            
+                        
+                          </tr>
+                        
+
+                        <tr>
+                        </tr>
+                         
+                                                 
+                      </table>
+                    </div>
+                  </div>
+                    <p> <b>Quantitative Results on datasets Synapse, ACDC.</b></p>            
+                    
+                </div>
+            
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='./Packages/TPCM-SegNet/Data/results/all_visualize.png' height="80%" width="100%" />
+                                </td>
+                              </tr>
+                              <tr> <td> <hr></td> </tr>
+                                                                 
+                          </table>
+                        </div>
+                      </div>
+                           
+                        
+                    </div>
+        </section>
+        
+
+        <section>
+    
+
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
