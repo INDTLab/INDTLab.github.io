@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CCMSRNet">
+
+    <title>Wall Crack Detection</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/Wall_Crack/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/Wall_Crack/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/Wall_Crack/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/Wall_Crack/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/Wall_Crack/js/bulma-slider.min.js"></script>
+    <script src="./Packages/Wall_Crack/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">SPGDD-GPT: Image-Text-Driven Generic Defect Diagnosis Using a Self-prompted Large Vision-Language Model
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Shengwang An</a></li>
+               
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao" target="_blank">Xinghui Dong</a></li>
+    
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a></li>
+                </ul>
+            </div>
+            </br>
+       
+
+        <div align="center">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+              <table>
+                <tr>
+                  <td style="padding:5px 5px 5px 5px;">
+                      <img src='./Packages/SPGDD-GPT/model.png' height="500" width="889" />
+                  </td>
+                </tr>        
+              </table>
+            </div>
+          </div>
+       
+                          
+            
+        </div>
+    </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Large Vision-Language Models (LVLMs) mainly rely on template-generated textual descriptions to understand defects. This reliance impairs the performance of these models for Industrial Defect Detection (IDD) because they typically lack specialized knowledge. On the other hand, the majority of existing IDD methods only utilize the contrastive loss function for image-to-text feature alignment, which limits their ability to focus on defective regions. In addition, these methods usually use cosine similarity for contextual learning, which also restricts their ability to understand and adapt to complex contexts. To address these issues, we first collect a large-scale defect data set with textual descriptions, namely, the Text-Augmented Defect Data Set (TADD), to fine-tune an LVLM for defect description. We also propose a Self-prompted Generic Defect Diagnosis (including Defect Detection and Defect Description) LVLM, i.e., the SPGDD-GPT. This method can effectively utilize contextual information through a Multi-scale Self-prompted Memory Module (MSSPMM) and a Text-Driven Defect Focuser (TDDF) that we deliberately design, to adapt to unseen defect categories and focus on abnormal regions. Experimental results show that our method normally achieves the better performance than its counterparts across the 21 subsets of TADD under the 1-shot, 2-shot and 4-shot defect detection settings, demonstrating strong detection and generalization capabilities1. The proposed method can also generate a textural description of the defects contained in each test image. These promising results should be due to the proposed MSSPMM and TDDF and the large-scale TADD.</div>
+        </section>
+        
+        
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                               <!-- <a href='https://github.com/INDTLab/Wall_Crack/blob/main/PR.pdf' target="_blank"><img class='links-cover'src='./Packages/Wall_Crack/Data/Cover.png' alt='PDF Cover' width="140"></a>  -->
+                               <img class='links-cover'src='./Packages/SPGDD-GPT/paperfirst.png' alt='PDF Cover' width="140">
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                               <!-- <a href='https://github.com/INDTLab/Wall-Crack-Detection' target="_blank"><img class='links-cover'
+                                        src='./Packages/Wall_Crack/Data/github.png' alt='github icon' width="160"></a>  -->
+                                    <img class='links-cover'
+                                            src='./Packages/Wall_Crack/Data/github.png' alt='github icon' width="160">
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                               <!-- <a href='https://drive.google.com/file/d/1m2Lfir5cGTaFdor-5GDOfHMy7cnKtsIC/view' target="_blank"><img class='links-cover'
+                                        src='./Packages/Wall_Crack/Data/github.png' alt='github icon' width="160"></a>  -->
+                                    <img class='links-cover'
+                                            src='./Packages/SPGDD-GPT/data.png' alt='github icon' width="200">
+                            </div>
+                        </td>
+
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <!--  <a href='https://github.com/INDTLab/Wall_Crack/blob/main/PR.pdf' target="_blank">Paper</a> -->
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11363231" οnclick="function here">Paper</a>
+                        </td>
+                        <td> 
+                            <a href='https://github.com/INDTLab/SPGDD-GPT' target="_blank">Code</a> 
+                        </td>  
+                        <td> 
+                            <!-- <a href='https://drive.google.com/file/d/1zjO48-82Em9qQFxVqI1NOMHX3mCpg0Yr/view?usp=drive_link' target="_blank">Code</a>  -->  
+                            <a href="https://indtlab.github.io/projects/SPGDD-GPT/TADD.json" οnclick="function here">Data Set</a>
+                        </td>  
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+        
+
+
+        
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                      <table>
+                        <tr>
+                          <td style="padding:5px 5px 5px 5px;">
+                            <img src='./Packages/SPGDD-GPT/exp.png' height="100%" width="100%" />
+                        </td>
+                        </tr>
+                          
+                      </table>
+                    </div>
+                  </div>
+                    <!-- <p> <b>Quantitative Results on UIEB, SUIM-E, EUVP and RUIE data sets.</b></p>             -->
+                    
+                </div>
+            
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                              <td style="padding:5px 5px 5px 5px;">
+                                  <img src='./Packages/SPGDD-GPT/expq1.png' height="80%" width="100%" />
+                              </td>
+                              <td style="padding:5px 5px 5px 5px;">
+                                  <img src='./Packages/SPGDD-GPT/expq2.png' height="80%" width="100%" />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                                   
+                        
+                    </div>
+            <!-- <div class="section-title">
+                Lightweight Axial Self-Attention
+            </div>
+            <div class="details">
+                <div align="center">
+                <img class='links-cover'
+                        src='./Packages/CCMSRNet/Data/network/attention_comparison.drawio.png' ,height="50%" width="80%"></div>
+            </div> -->
+        </section>
+        
+
+        <section>
+    
+<!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
