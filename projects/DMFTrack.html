@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DMFTrack">
+
+    <title>DMFTrack</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DMFTrack/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DMFTrack/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DMFTrack/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/DMFTrack/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/DMFTrack/js/bulma-slider.min.js"></script>
+    <script src="./Packages/DMFTrack/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <div class="wrapper">
+        <!--
+        <section class="section">
+        
+            <div class="details">
+                <div align="center">
+                <img class='links-cover'
+                        src='./Data/banner/banner_test.png' ,height="50%" width="100%"></div>
+            </div>
+            
+            
+        </section>
+        -->
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername"> UAV-Based Maritime Object Tracking: A New Data Set and Dynamic Multi-scale Fusion Transformer
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Xinyue Wang</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&user=377ZzK8AAAAJ" target="_blank">Jingjing Xiao</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao" target="_blank">Xinghui Dong</a></li>
+    
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a></li>
+                </ul>
+            </div>
+            </br>
+       
+
+        <div align="center">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+              <table>
+                <tr>
+                  <td style="padding:5px 5px 5px 5px;">
+                      <img src='./Packages/DMFTrack/Data/network/DMFTrack.png' height="521" width="1178" />
+                  </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+            <p> The architecture of the proposed DMFTrack.</p>            
+            
+        </div>
+    </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                To perform the Unmanned Aerial Vehicle-based (UAV-based) maritime object tracking task, we
+deliberately acquire a new ship tracking data set, namely, UAVSeaShip102. This task faces severe
+challenges due to rapid target motion, drastic scale variations, and frequent occlusion in complex
+aerial scenes. Recent transformer-based trackers have shown remarkable potential in modeling
+long-range dependencies. However, their performance often deteriorates when faced with large-
+scale changes or unreliable large-scale updates. To address these issues, we propose a Dynamic
+Multi-scale Fusion Transformer Tracker (DMFTrack) for UAV-based single object tracking,
+which comprises two key components, i.e., a Dynamically-Weighted Multi-scale Feature Fusion
+Module (DWMS-FFM) and an Adaptive Template Update Mechanism (ATUM). The DWMS-
+FFM adaptively aggregates features from multiple scales via a learnable gating strategy, allowing
+the model to dynamically balance spatial details and global contextual information. Furthermore,
+the ATUM employs a Score Head to estimate the reliability of the current template through
+dual-stage cross-attention, allowing confidence-guided online template updates that mitigate
+model drift. Our DMFTrack achieves consistent improvements in both accuracy and robustness.
+Extensive experiments conducted on UAVSeaShip102 and six commonly-used UAV-based
+benchmarks demonstrate that our method outperforms 23 trackers in challenging scenarios,
+which involve scale variation, occlusion, and background clutter, while maintaining real-time
+performance.
+            </div>
+        </section>
+        
+        
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='' target="_blank"><img class='links-cover'src='./Packages/DMFTrack/Data/Cover.png' alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/DMFTrack' target="_blank"><img class='links-cover'
+                                        src='./Packages/DMFTrack/Data/github.png' alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href='' target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/DMFTrack' target="_blank">Code</a></td>
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="section-title">
+                Dataset Display
+            </div>
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                              <td style="padding:5px 5px 5px 5px;">
+                                  <img src='./Packages/DMFTrack/Data/results/dataset.png' height="80%" width="100%" />
+                            </tr>
+                             
+                            
+                              
+                          </table>
+                        </div>
+                      </div>
+                        <p> <b>Eight sequence examples contained in UAVSeaShip102, captured under different weather conditions, illuminations
+and motion patterns.</b></p>            
+                        
+                    </div>
+            
+        </section>
+        
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                      <table>
+                        <tr>
+                          <td style="padding:5px 5px 5px 5px;">
+                              <img src='./Packages/DMFTrack/Data/results/result2.png' height="80%" width="100%" />
+                        </tr>
+                      </table>
+                      <p> <b>Visualization of the results of our tracker and six state-of-the-art baselines on six challenging sequences contained
+in our UAVSeaShip102 data set, including Ship0010, Ship0029, Ship0030, Ship0034, Ship0035 and Ship0043 (from top to
+bottom).</b> </p>   
+            
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='./Packages/DMFTrack/Data/results/result1.png' height="80%" width="100%" />
+                                </td>
+                                
+                              </tr>
+                              <tr> <td> <hr></td> </tr> 
+                              
+                          </table>
+                          <p> <b>Comparison between our method and 22 state-of-the-art lightweight trackers in terms of the precision and Success Rate
+metrics on the test sets of DTB70, UAV123, UAV123@10fps, UAVTrack112 and UAVTrack112L. In addition, the average metric values
+computed across the five data sets are presented in the column of “Avg.”. Here, the top three results derived in each case
+are highlighted in the red, blue and cyan fonts, respectively.</b> </p>     
+
+                        </div>
+                      </div>
+                               
+                        
+                    </div>
+        </section>
+
+
+    </div>
+
+
+</body>
+
+</html>
