@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PATS-UIENet">
+
+    <title>DGD-SAM</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-slider.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">Boundary-Aware Shape Recognition Using Graph Convolutional Networks
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Yihan Shang</a><sup>†</sup></li>
+                    <li><a href="" target="_blank">Lin Wang</a><sup>†</sup></li>
+                    <li><a href="" target="_blank">Junyu Dong</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao"
+                            target="_blank">Xinghui Dong</a></li>
+
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a>
+                    </li>
+                </ul>
+                <!-- <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Ocean University of China</a></li>
+                </ul> -->
+
+            </div>
+            </br>
+
+
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='.\Packages\DGD-SAM\Data\network\DGD-SAM.png' height="803" width="1096" />
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p> The architecture of the proposed Boundary-Aware Distracted Attention Network for Camouflaged Object
+                    Detection (DGD-SAM).</p>
+
+            </div>
+        </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                With the growing demand for deep-sea exploration and marine resource exploitation, underwater vision
+                technologies have become a critical enabler for applications, such as robotic operations and marine
+                biological monitoring. Among various vision tasks, Underwater Image Instance Segmentation (UIIS) is
+                particularly challenging, as it requires both precise object localization and pixel-level mask
+                generation. In recent years, vision foundation models, in particular, the Segment Anything Model (SAM),
+                have demonstrated remarkable zero-shot generalization capabilities in generic scenes. However, their
+                performance remains unsatisfactory in complex underwater environments. Severe light absorption and
+                scattering in underwater environments lead to significant image degradation, including color distortion,
+                extremely low contrast, and blurred boundaries, which substantially hinder effective feature extraction.
+                Moreover, the segmentation performance of SAM heavily relies on manually provided explicit prompts
+                (e.g., points, boxes, and masks). This dependency not only increases annotation costs but also limits
+                its applicability in unattended or complex underwater scenarios. To address these challenges, we propose
+                a Dynamically-Guided SAM (DGD-SAM). By introducing a dynamically-guided mechanism and integrating
+                feature aggregation with a multi-scale feature enhancement module, DGD-SAM establishes a complete
+                pipeline for automatic prompt generation and refined segmentation. First, to mitigate the feature
+                distribution discrepancy between detection and segmentation tasks, an Adaptive Feature Aggregator (AFA)
+                is designed. This module re-models inter-channel dependencies through a channel attention mechanism,
+                achieving task alignment across both spatial and channel dimensions and effectively enhancing the
+                model’s sensitivity to weak underwater targets. Second, considering the large variation in underwater
+                target scales and the complexity of background interference, a multi-scale feature enhancement module is
+                constructed. By building a cross-resolution feature pyramid, this module significantly improves the
+                model’s ability to capture targets of various scales in complex scenes. During the decoding stage, a
+                Dynamically-Guided Decoder (DGD) is proposed, which first integrates the initial segmentation mask with
+                image features to generate dynamic guidance information, and then performs refined mask prediction
+                through bidirectional attention interactions between the prompts and image features. Experimental
+                results demonstrate that DGD-SAM consistently outperforms state-of-the-art methods on four public
+                underwater data sets, including LIACI, USIS10K, UIIS, and UIIS10K, as well as two terrestrial scene data
+                sets, i.e., COME15K-E and COME15K-H. These results indicate that the proposed method not only achieves
+                superior performance in underwater environments but also maintains stable and competitive segmentation
+                performance in terrestrial scenes, suggesting that the model does not overly rely on scene-specific
+                characteristics and exhibits strong generalizability and scalability.
+
+            </div>
+        </section>
+
+
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://INDTLab.github.io/projects/Packages/DGD-SAM/Data/DGD-SAM.pdf'
+                                    target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/DGD-SAM/Data/Cover_1.png'
+                                        alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/DGD-SAM' target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/DGD-SAM/Data/github.png'
+                                        alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href='https://INDTLab.github.io/projects/Packages/DGD-SAM/Data/DGD-SAM.pdf'
+                                target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/DGD-SAM' target="_blank">Code</a></td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
+        <!-- <section class="section">
+            <div class="section-title">
+                Overall Network Architecture
+            </div>
+            <div class="details">
+                <div align="center">
+                    <img class='links-cover'
+                        src='https://indtlab.github.io/projects/Packages/BASR-GCN/Data/network/BASR-GCN-MS.png'
+                        ,height="50%" width="80%">
+                </div>
+                <div align="center">
+                    <p> <b>The illustration of the proposed Multi-scale Boundary-Aware Shape Recognition Graph
+                            Convolutional Network (BASR-GCN-MS).</b></p>
+                    <div class="details">
+                        <div align="center">
+                            <img class='links-cover'
+                                src='https://indtlab.github.io/projects/Packages/BASR-GCN/Data/network/operation.png'
+                                ,height="50%" width="80%">
+                        </div>
+                        <div align="center">
+                            <p> <b>The illustration of the operation of the proposed BASR-GCN.</b></p>
+                        </div>
+        </section> -->
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DGD-SAM/Data/results/Table1.png'
+                                        height="80%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DGD-SAM/Data/results/Visualization.png'
+                                        height="64%" width="80%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DGD-SAM/Data/results/Visualization_1.png'
+                                        height="40%" width="50%" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <p> <b></b></p>
+
+            </div>
+
+
+        </section>
+        <section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+
+            <pre>
+                    <code>
+                        <!-- @ARTICLE{zhao2025boundary,
+                        title={Boundary-Aware Shape Recognition Using Dynamic Graph Convolutional Networks},
+                        author={Jinming Zhao, Junyu Dong, Huiyu Zhou, Xinghui Dong},
+                        journal={Pattern Recognition},
+                        volume={97},
+                        pages={107000},
+                        year={2025},
+                        } -->
+                        todo
+                    </code>
+                  </pre>
+
+
+        </section>
+
+
+        <section>
+
+            <!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
