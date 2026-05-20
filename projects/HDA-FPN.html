@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HDA-FPN">
+
+    <title>HDA-FPN</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/HDA-FPN/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/HDA-FPN/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/HDA-FPN/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/HDA-FPN/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/HDA-FPN/js/bulma-slider.min.js"></script>
+    <script src="./Packages/HDA-FPN/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">UAV-Based Oceanic Scene Object Detection: A New Benchmark and Hierarchical Dynamic Aggregation Feature Pyramid Network
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Senjie Wang</a></li>
+                    <li><a href="" target="_blank">Chengjia Wan</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao"
+                            target="_blank">Xinghui Dong</a></li>
+
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a>
+                    </li>
+                </ul>
+                <!-- <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Ocean University of China</a></li>
+                </ul> -->
+
+            </div>
+            </br>
+
+
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='.\Packages\HDA-FPN\Data\network\HDA-FPN.png' height="461" width="1096" />
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p> The architecture of the proposed HDA-FPN.</p>
+
+            </div>
+        </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+               Unmanned Aerial Vehicle (UAV)-based oceanic scene object detection is critical for maritime surveillance and Search-and-Rescue (SAR), yet existing benchmarks are predominantly land-centric, lacking category diversity and precise oriented annotations for maritime targets. To bridge this gap, we introduce UAV-Ocean, a large-scale maritime benchmark comprising 11,317 images and over 50,000 Oriented Bounding Box (OBB) annotations, covering 45 fine-grained categories across diverse altitudes, lighting conditions, and sea states. We further propose a Hierarchical Dynamic Aggregation Feature Pyramid Network (HDA-FPN)\footnote{The data set and code will be available at https://github.com/INDTLab/HDA-FPN upon the acceptance of the paper.}, to address the severe scale variations and semantic misalignment inherent in multi-scale fusion. Specifically, HDA-FPN integrates a Cross-Scale Dynamic Fusion (CSDF) module to leverage inter-level feature differences for adaptive spatial competition, and a Mid-level Guided Feature Aggregation (MGFA) module to redistribute contextual information centered on intermediate semantics. On top of the HDA-FPN, we adopt a novel variant of YOLOv11, namely, YOLO-HDA-FPN. Extensive experiments on the UAV-Ocean dataset demonstrate the superiority of our method. In particular, YOLO-HDA-FPN achieves an $mAP_{50}$ value of 65.7\%, outperforming the YOLOv11 baseline by 3.6\% while maintaining a real-time inference speed of 51.0 FPS. This work provides both a large-scale benchmark and an effective solution for challenging maritime detection tasks.
+            </div>
+        </section>
+
+
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href=''
+                                    target="_blank"><img class='links-cover'
+                                        src='./Packages/HDA-FPN/Data/github.png'
+                                        alt='PDF Cover' width="160"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/HDA-FPN' target="_blank"><img class='links-cover'
+                                        src='./Packages/HDA-FPN/Data/github.png'
+                                        alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href=''
+                                target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/HDA-FPN' target="_blank">Code</a></td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
+        <!-- <section class="section">
+            <div class="section-title">
+                Overall Network Architecture
+            </div>
+            <div class="details">
+                <div align="center">
+                    <img class='links-cover'
+                        src='https://indtlab.github.io/projects/Packages/BASR-GCN/Data/network/BASR-GCN-MS.png'
+                        ,height="50%" width="80%">
+                </div>
+                <div align="center">
+                    <p> <b>The illustration of the proposed Multi-scale Boundary-Aware Shape Recognition Graph
+                            Convolutional Network (BASR-GCN-MS).</b></p>
+                    <div class="details">
+                        <div align="center">
+                            <img class='links-cover'
+                                src='https://indtlab.github.io/projects/Packages/BASR-GCN/Data/network/operation.png'
+                                ,height="50%" width="80%">
+                        </div>
+                        <div align="center">
+                            <p> <b>The illustration of the operation of the proposed BASR-GCN.</b></p>
+                        </div>
+        </section> -->
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='.\Packages\HDA-FPN\Data\results\result1.png'
+                                        height="80%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='.\Packages\HDA-FPN\Data\results\table1.png'
+                                        height="80%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='.\Packages\HDA-FPN\Data\results\result2.png'
+                                        height="40%" width="50%" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <p> <b></b></p>
+
+            </div>
+
+
+        </section>
+        <section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+
+            <pre>
+                    <code>
+                        <!-- @ARTICLE{zhao2025boundary,
+                        title={Boundary-Aware Shape Recognition Using Dynamic Graph Convolutional Networks},
+                        author={Jinming Zhao, Junyu Dong, Huiyu Zhou, Xinghui Dong},
+                        journal={Pattern Recognition},
+                        volume={97},
+                        pages={107000},
+                        year={2025},
+                        } -->
+                        todo
+                    </code>
+                  </pre>
+
+
+        </section>
+
+
+        <section>
+
+            <!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
+
