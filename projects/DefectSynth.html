@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DefectSynth">
+
+    <title>DefectSynth</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DefectSynth/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DefectSynth/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/DefectSynth/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/DefectSynth/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/DefectSynth/js/bulma-slider.min.js"></script>
+    <script src="./Packages/DefectSynth/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">DefectSynth: Few-Shot Defective Image Generation by Modeling Shape and Appearance
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Dexu Zhao</a><sup>†</sup></li>
+                    <li><a href="" target="_blank">Xukun Qin</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao"
+                            target="_blank">Xinghui Dong</a></li>
+
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a>
+                    </li>
+                </ul>
+                <!-- <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Ocean University of China</a></li>
+                </ul> -->
+
+            </div>
+            </br>
+
+
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='.\Packages\DefectSynth\Data\network\DefectSynth.png' height="1244" width="1746" />
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p> The architecture of the proposed DefectSynth.</p>
+
+            </div>
+        </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Since the acquisition of a large amount of defect data is expensive and time-consuming, the limited availability of defective samples impairs the accuracy and generalizability of defect detection methods. Although defect generation approaches have been explored for data augmentation, they usually suffer from either a lack of realism or limited diversity. To address these challenges, we propose a two-stage controllable few-shot defective image generation network, namely, DefectSynth, which models both the shape and appearance of defects. The first stage aims to generate continuous defect masks even with a few real masks. To this end, we propose a Hybrid Mask Interpolation (HMI) module, which performs interpolation in the image or latent space. The second stage is used to synthesize the defective appearance. We first fine-tune the pre-trained ControlNet, which is then used together with a pre-trained stable diffusion model to synthesize defective images. Given a mask generated in the first stage and a text prompt, they are integrated with a defect-free image to synthesize a high-fidelity defective image. To alleviate the issue of generation of indistinct defects with existing methods, we propose a Selective Attention Enhancement (SAE) mechanism that highlights the details of defects. We also design a Similarity-Based Feature Fusion (SFF) module to merge different local features, thereby further enriching the appearance diversity of defects. Using the defect data generated by DefectSynth, the classification accuracy on MVTec-AD has been improved from 44.03\% to 66.70\% compared with the baseline without synthetic data augmentation, while the F1-Score values computed on GDXray and DeepCrack for small-defect localization have been increased from 70.48\% to 76.64\% and from 70.08\% to 83.27\%, respectively. These performance gains should be due to the fact that our method is able to generate realistic and diverse defective images by modeling both the shape and appearance of defects.
+
+            </div>
+        </section>
+
+
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://INDTLab.github.io/projects/Packages/DefectSynth/DefectSynth.pdf'
+                                    target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/Cover.png'
+                                        alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/DefectSynth' target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/github.png'
+                                        alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href='https://INDTLab.github.io/projects/Packages/DefectSynth/Data/DefectSynth.pdf'
+                                target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/DefectSynth' target="_blank">Code</a></td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Table1.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Table2.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Table3.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Table4.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Visualization1.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/DefectSynth/Data/results/Visualization2.png'
+                                        height="100%" width="100%" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <p> <b></b></p>
+
+            </div>
+
+
+        </section>
+        <section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+
+            <pre>
+                <code>
+    @article{,
+      title={},
+      author={},
+      journal={},
+      year={},
+      publisher={}
+    }
+                </code>
+              </pre>
+
+
+        </section>
+
+
+        <section>
+
+            <!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
