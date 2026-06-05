@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TG-TSGNet">
+
+    <title>TG-TSGNet</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/UMDM-USG/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/UMDM-USG/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/UMDM-USG/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/UMDM-USG/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/UMDM-USG/js/bulma-slider.min.js"></script>
+    <script src="./Packages/UMDM-USG/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <div class="wrapper">
+        <!--
+        <section class="section">
+        
+            <div class="details">
+                <div align="center">
+                <img class='links-cover'
+                        src='./Data/banner/banner_test.png' ,height="50%" width="100%"></div>
+            </div>
+            
+            
+        </section>
+        -->
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername"> UMDM-USG: A Unified Multi-view Diffusion Model for Underwater Scene Generation via Cross-View Representation Alignment
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Yifan Zhu</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=bRWUiGIAAAAJ&hl=en&oi=ao" target="_blank">Chengjia Wang</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=iPYdUpAAAAAJ&hl=en" target="_blank">Xinghui Dong</a></li>
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a></li>
+                </ul>
+            </div>
+            </br>
+       
+
+        <div align="center">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+              <table>
+                <tr>
+                  <td style="padding:5px 5px 5px 5px;">
+                      <img src='./Packages/UMDM-USG/Data/network/UMDM-USG.png' height="521" width="1178" />
+                  </td>
+                  </tr>  
+              </table>
+            </div>
+          </div>
+            <p> The architecture of the proposed UMDM-USG.</p>            
+            
+        </div>
+    </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Underwater scene understanding is crucial for marine exploration, ecological monitoring, and robotic operations, yet the scarcity of large-scale, high-quality underwater datasets severely limits the performance of learning-based models.In this paper, we propose UMDM-USG, a Unified Multi-view Diffusion Model for Underwater Scene Generation based on cross-view representation alignment. By treating each modality---image, segmentation mask, depth map, and surface normal---as a distinct view of the same underwater scene, UMDM-USG jointly generates coherent multi-view outputs conditioned on expressive textual descriptions. To strengthen cross-view coherence, we introduce a Conditional Generation Alignment Attention (CGA-Attn) mechanism that explicitly enhances semantic and geometric alignment across views. In addition, we construct the U-TMDN dataset, consisting of 53,403 underwater images with comprehensive multi-view annotations. Extensive experiments demonstrate that UMDM-USG achieves superior or competitive performance in image quality and semantic consistency, and that the generated multi-view data consistently improve multiple downstream underwater vision tasks.
+            </div>
+        </section>
+        
+        
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='' target="_blank"><img class='links-cover'src='./Packages/TG-TSGNet/Data/Cover.png' alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/UMDM-USG' target="_blank"><img class='links-cover'
+                                        src='./Packages/UMDM-USG/Data/github.png' alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href='https://indtlab.github.io/projects/Packages/UMDM-USG/Data/network/Text_Guided_Arbitrary_Resolution_Terrain_Image_Generation.pdf' target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/UMDM-USG' target="_blank">Code</a></td>
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+        
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                      <table>
+                        <tr>
+                          <td style="padding:5px 5px 5px 5px;">
+                              <img src='./Packages/UMDM-USG/Data/Table.png' height="80%" width="100%" />
+                        </tr>
+                         
+                        
+                          
+                      </table>
+
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                              <td style="padding:5px 5px 5px 5px;">
+                                  <img src='./Packages/UMDM-USG/Data/FPS.png' height="80%" width="100%" />
+                            </tr>
+                             
+                            
+                              
+                          </table>
+                        </div>
+                      </div>
+                        <p> <b>llustration of different underwater scene generation method.</b></p>            
+                        
+                    </div>
+            
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='./Packages/UMDM-USG/Data/result.png' height="80%" width="100%" />
+                                </td>
+                                
+                              </tr>
+                              <tr> <td> <hr></td> </tr> 
+                              
+                          </table>
+                          <p> <b>Qualitative comparison of different generative models in terms of a given textual description of underwater scene.</b> </p>     
+                        </div>
+                      </div>
+                               
+                        
+                    </div>
+        </section>
+         <<section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+            
+                <pre>
+                    <code>
+
+
+
+
+                    </code>
+                  </pre>
+                  
+
+        </section> 
+        
+
+        <section>
+    
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
