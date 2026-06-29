@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WS-UIENet">
+
+    <title>WS-UIENet</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-slider.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">WS-UIENet: A Wavelet-Decoupled Semantics-Guided Underwater Image Enhancement Network
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Shixuan Xu</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao" target="_blank">Xinghui Dong</a></li>
+    
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a></li>
+                </ul>
+                <!-- <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Ocean University of China</a></li>
+                </ul> -->
+
+            </div>
+            </br>
+       
+
+        <div align="center">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+              <table>
+                <tr>
+                  <td style="padding:5px 5px 5px 5px;">
+                      <img src='.\Packages\PATS-UIENet\Data\network\ws_arch1.png' height="803" width="1096" />
+                  </td>
+
+                </tr>
+              </table>
+            </div>
+          </div>
+            <p> The overall architecture of WS-UIENet consists of two main components: a wavelet-based frequency enhancement stage and a semantic-guided spatial refinement stage. </p>            
+            
+        </div>
+    </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Underwater images often suffer from severe degradation caused by wavelength-dependent light absorption and scattering, resulting in color distortion, illumination attenuation, low contrast, and loss of fine structural details. 
+		Existing underwater image enhancement (UIE) approaches have achieved promising progress, yet they still face notable limitations. 
+		Prior-based methods usually depend on restrictive physical assumptions and therefore show limited adaptability to diverse underwater environments, whereas learning-based methods often rely on increasingly complex network architectures, leading to high computational cost and limited practicality in resource-constrained underwater platforms. 
+		To overcome these challenges, we propose a wavelet-decoupled semantic-guided underwater image enhancement network (WS-UIENet), which integrates the wavelet transform with textual semantic guidance. 
+		Specifically, WS-UIENet adopts a two-stage enhancement framework, which comprises a wavelet-based frequency enhancement stage and a semantic-guided spatial refinement stage. 
+		In the frequency enhancement stage, wavelet decomposition is used to separate low-frequency illumination and color degradation from high-frequency texture and structural degradation, enabling targeted restoration of different degradation components while reducing the learning burden of the network. 
+		In the spatial refinement stage, textual semantic features extracted using a vision--language model are injected into the bottleneck layer as conditional modulation signals, providing perceptually meaningful guidance for semantic-consistent enhancement. 
+		To our knowledge, this work is the first to jointly exploit wavelet-based frequency decomposition and textual semantic guidance within a unified framework for efficient UIE. 
+		Comprehensive experiments on four real-world underwater datasets demonstrate that the proposed WS-UIENet achieves competitive performance compared with 20 state-of-the-art UIE methods. 
+		In addition, WS-UIENet achieves comparable performance to the strongest text-guided UIE method while nearly halving computational complexity, demonstrating a favorable balance between effectiveness and efficiency.
+            </div>
+        </section>
+        
+        
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href=' ' target="_blank"><img class='links-cover'src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/WS_UIENet_Cover-1.png' alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/WS-UIENet' target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/github.png' alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href=' ' target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/WS-UIENet' target="_blank">Code</a></td>
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-title">
+                Wavelet-Based Frequency Enhancement
+            </div>
+            <div class="details">
+                <div align="center">
+                <img class='links-cover'
+                        src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/network/ws_arch2.png' ,height="50%" width="80%"></div>
+            <div align="center">
+                <p> <b>Architecture of the wavelet-based frequency enhancement stage in WS-UIENet.</b></p>
+                </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                Semantic-Guided Spatial Refinement
+            </div>
+            <div class="details">
+                <div align="center">
+                <img class='links-cover'
+                        src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/network/ws_arch3.png' ,height="50%" width="80%"></div>
+            <div align="center">
+                <p> <b>Architecture of the semantic-guided spatial refinement stage in WS-UIENet.</b></p>
+                </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                      <table>
+                        <tr>
+                            <td style="padding:5px 5px 5px 5px;">
+                                <img src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/results/wsTableI.png' height="80%" width="100%" />
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td style="padding:5px 5px 5px 5px;">
+                                <img src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/results/wsTableII.png' height="80%" width="100%" />
+                            </td>
+                          </tr>
+                         
+                      </table>
+                    </div>
+                  </div>
+                    <p> <b>Quantitative Results on LUIQD-TD, UIEB, SUIM-E and SQUID data sets.</b></p>            
+                    
+                </div>
+            
+                <div align="center">
+                    <div class="container">
+                        <div class="columns is-multiline is-centered">
+                          <table>
+
+                             <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/results/wsbaselines_L622.png' height="80%" width="100%" />
+                                </td>
+                              </tr>
+                              <tr> <td> <hr></td> </tr>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/results/wsbaselines_U80.png' height="80%" width="100%" />
+                                </td>
+                              </tr>
+                              <tr> <td> <hr></td> </tr>
+                                
+                              <tr>
+                                <td style="padding:5px 5px 5px 5px;">
+                                    <img src='https://indtlab.github.io/projects/Packages/PATS-UIENet/Data/results/wsbaselines_S110.png' height="80%" width="100%" />
+                                </td>
+                              </tr>
+                              <tr> <td> <hr></td> </tr>
+                       
+                                
+                          </table>
+                        </div>
+                      </div>
+                        <p> <b> Qualitative Results on Three Real World Underwater Images and A Underwater Image.</b> </p>            
+                        
+                    </div>
+        </section>
+         <section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+            
+                <pre>
+                    <code>
+    @ARTICLE{
+
+    }
+                    </code>
+                  </pre>
+                  
+
+        </section>
+        
+
+        <section>
+    
+<!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
