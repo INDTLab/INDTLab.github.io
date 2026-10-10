@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PATS-UIENet">
+
+    <title>UniIA-DET</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/avatarclip_main.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-carousel.min.css">
+    <link id="theme-style" rel="stylesheet" href="./Packages/PATS-UIENet/css/bulma-slider.min.css">
+
+    <!-- <script type="module" src="./assets/js/background_box.js"></script> -->
+    <script type="module" src="./js/background_star.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-carousel.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/bulma-slider.min.js"></script>
+    <script src="./Packages/PATS-UIENet/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <section class="section intro-section">
+            <div class="intro-container" style="text-align: center;">
+                <div class="header">
+                    <h3 class="papername">UniIA-DET: Illumination-Adaptive Detection for UAV-Based Wind Turbine Inspection
+                    </h3>
+                </div>
+                <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Xunyang Su</a><sup>†</sup></li>
+                    <li><a href="" target="_blank">Chengjia Wang</a><sup>†</sup></li>
+                    <li><a href="https://scholar.google.com/citations?user=InD0J_IAAAAJ&hl=en&oi=ao"
+                            target="_blank">Xinghui Dong</a></li>
+
+                </ul>
+                <ul class="list-unstyled name-list">
+                    <li><a href="https://indtlab.github.io/" target="_blank">INDTLab, Ocean University of China </a>
+                    </li>
+                </ul>
+                <!-- <ul class="list-unstyled name-list">
+                    <li><a href="" target="_blank">Ocean University of China</a></li>
+                </ul> -->
+
+            </div>
+            </br>
+
+
+            <div align="center">
+    <div class="container">
+        <div class="columns is-multiline is-centered">
+            <table>
+                <tr>
+                    <td style="padding:5px;">
+                        <img src='./Packages/UniIA-DET/Data/UniIA-DET.png'
+                             style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p>The architecture of the proposed illumination-adaptive detection framework built on top of an
+off-the-shelf object detector (UniIA-DET).</p>
+</div>
+        </section>
+
+        <section class='section'>
+            <div class="section-title">
+                Abstract
+            </div>
+            <div class="details" style="text-align: justify" ;>
+                Automated defect detection for wind turbine blades remains challenging
+under uncontrolled outdoor illumination, where backlight and low-light condi
+tions suppress texture cues, reduce local contrast, and increase false detections.
+We address this problem from both data and model perspectives. First, we
+construct a Complex-Lighting Wind Turbine Blade Defect Dataset (CL-WTBD)
+by integrating heterogeneous UAV-based inspection sources and harmonizing
+their annotations into a unified taxonomy. CL-WTBD is balanced across normal
+light, backlight, and low-light domains, providing a controlled benchmark for
+evaluating illumination robustness in blade defect detection. Second, we propose
+UniIA-DET, an illumination-adaptive detection framework built on top of an
+off-the-shelf object detector. Instead of relying on a standalone image enhance
+ment module or aligning features only in latent space, UniIA-DET introduces an
+Illumination-Adaptive Prompting Module (IAPM) before the detector backbone.
+The IAPM uses content-driven dynamic routing to compose an input-specific
+correction from a learnable prompt pool, which is additively injected into the raw
+image to calibrate exposure and contrast before feature extraction. The module
+is optimized jointly with the detector using the detection objective, allowing the
+correction process to be guided by classification and localization requirements 
+rather than by perceptual reconstruction criteria. Experiments on CL-WTBD
+show that the proposed module improves robustness under harsh illumination.
+On the YOLOv8n instantiation, the main benefit of IAPM appears under harsh
+illumination: averaged over three seeds, it improves the Backlight mAP@50 from
+0.352 to 0.392 and the Low-Light mAP@50 from 0.392 to 0.446, raising the
+macro-domain mAP@50 from 0.424 to 0.466, while the global mAP@50 changes
+from 0.387 to 0.398, within the run-to-run variation. Additional experiments with
+RT-DETR and Mamba-YOLO indicate that IAPM can be attached to different
+detector families without modifying their original architectures. These results
+demonstrate the practical value of detector-oriented input-space illumination
+correction for UAV-based wind turbine blade inspection.1
+
+            </div>
+        </section>
+
+
+        <section class='section links-section'>
+            <div class='section-title'>
+                Links
+            </div>
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://INDTLab.github.io/projects/Packages/UniIA-DET/Data/UniIA-DET.pdf'
+                                    target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/cover.png'
+                                        alt='PDF Cover' width="140"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='links-container'>
+                                <a href='https://github.com/INDTLab/UniIA-DET' target="_blank"><img class='links-cover'
+                                        src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/github.png'
+                                        alt='github icon' width="160"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href='https://INDTLab.github.io/projects/Packages/UniIA-DET/Data/UniIA-DET.pdf'
+                                target="_blank">Paper</a>
+                        </td>
+                        <td><a href='https://github.com/INDTLab/UniIA-DET' target="_blank">Code</a></td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
+        <!-- <section class="section">
+            <div class="section-title">
+                Overall Network Architecture
+            </div>
+            <div class="details">
+                <div align="center">
+                    <img class='links-cover'
+                        src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/UniIA-DET.png'
+                        ,height="50%" width="80%">
+                </div>
+                <div align="center">
+                    <p> <b>The architecture of the proposed illumination-adaptive detection framework built on top of an off-the-shelf object detector (UniIA-DET).</b></p>
+                    <div class="details">
+                        <div align="center">
+                            <img class='links-cover'
+                                src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/UniIA-DET.png'
+                                ,height="50%" width="80%">
+                        </div>
+                        <div align="center">
+                            <p> <b>The illustration of the operation of the proposed UniIA-DET.</b></p>
+                        </div>
+        </section> -->
+
+        <section class="section">
+            <div class="section-title">
+                Experimental Results
+            </div>
+            <div align="center">
+                <div class="container">
+                    <div class="columns is-multiline is-centered">
+                        <table>
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/result1.png'
+                                        height="80%" width="100%" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:5px 5px 5px 5px; text-align:center;">
+                                    <img src='https://indtlab.github.io/projects/Packages/UniIA-DET/Data/result2.png'
+                                        height="64%" width="80%" />
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+                <p> <b></b></p>
+
+            </div>
+
+
+        </section>
+        <section class='section'>
+            <div class='section-title'>
+                Citation
+            </div>
+
+            <pre>
+                <code>
+@article{article,
+        author = {Xunyang, Su and Chengjia, Wang and Xinghui Dong},
+        year = {2026},
+        month = {10},
+        pages = {},
+        title = {UniIA-DET: Illumination-Adaptive Detection for UAV-Based WindTurbine Inspection},
+        journal = {Pattern Recognition},
+       }
+                </code>
+              </pre>
+
+
+        </section>
+
+
+        <section>
+
+            <!--             <p>We referred to the project page of <a href="https://ykdai.github.io/projects/BracketFlare">BracketFlare</a> when creating this
+                project page.</p> -->
+            <!-- <p> This project is licensed under <a
+                href="https://github.com/ykdai/BracketFlare/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.</p> -->
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
