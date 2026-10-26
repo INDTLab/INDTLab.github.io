@@ -87,23 +87,22 @@
             </div>
             <div class="details" style="text-align: justify" ;>
                 To perform the Unmanned Aerial Vehicle-based (UAV-based) maritime object tracking task, we
-deliberately acquire a new ship tracking data set, namely, UAVSeaShip102. This task faces severe
-challenges due to rapid target motion, drastic scale variations, and frequent occlusion in complex
-aerial scenes. Recent transformer-based trackers have shown remarkable potential in modeling
-long-range dependencies. However, their performance often deteriorates when faced with large-
-scale changes or unreliable large-scale updates. To address these issues, we propose a Dynamic
-Multi-scale Fusion Transformer Tracker (DMFTrack) for UAV-based single object tracking,
-which comprises two key components, i.e., a Dynamically-Weighted Multi-scale Feature Fusion
-Module (DWMS-FFM) and an Adaptive Template Update Mechanism (ATUM). The DWMS-
-FFM adaptively aggregates features from multiple scales via a learnable gating strategy, allowing
-the model to dynamically balance spatial details and global contextual information. Furthermore,
-the ATUM employs a Score Head to estimate the reliability of the current template through
-dual-stage cross-attention, allowing confidence-guided online template updates that mitigate
-model drift. Our DMFTrack achieves consistent improvements in both accuracy and robustness.
-Extensive experiments conducted on UAVSeaShip102 and six commonly-used UAV-based
-benchmarks demonstrate that our method outperforms 23 trackers in challenging scenarios,
-which involve scale variation, occlusion, and background clutter, while maintaining real-time
-performance.
+acquire a new ship tracking data set, namely, UAVSeaShip102. This task faces severe challenges
+due to rapid target motion, drastic scale variations, and frequent occlusion in complex aerial
+scenes. Recent transformer-based trackers have shown remarkable potential in modeling long-
+range dependencies. However, their performance often deteriorates when faced with large-scale
+changes or unreliable updates. To address these issues, we propose a Dynamic Multi-scale Fusion
+Transformer Tracker (DMFTrack) for UAV-based single object tracking, which comprises two
+key components, i.e., a Dynamically-Weighted Multi-scale Feature Fusion Module (DWMS-
+FFM) and an Adaptive Template Update Mechanism (ATUM). The DWMS-FFM adaptively
+aggregates features from multiple scales via a learnable gating strategy, allowing the model to
+dynamically balance spatial details and global context. Furthermore, the ATUM employs a Score
+Head to estimate the reliability of the current template through dual-stage cross-attention, allow-
+ing confidence-guided online template updates that mitigate model drift. Extensive experiments
+conducted on UAVSeaShip102 and five commonly-used UAV-based benchmarks demonstrate
+that our method outperforms 22 trackers in challenging scenarios, which involve scale variation,
+occlusion, and background clutter, while maintaining real-time performance. It is suggested that
+DMFTrack is also applicable to other aerial tracking scenarios.
             </div>
         </section>
         
